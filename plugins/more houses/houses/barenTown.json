@@ -1,0 +1,315 @@
+{
+	"id": "baren",
+	"weight": "1",
+	"rooms": {
+	  "main": {
+		"id": "main",
+		"title": "a barren town",
+		"body": "the buildings surrounding you are all but completely collapsed, except for one tall and resistant structure. it looks long abandoned.",
+		"btns": [
+		  {
+			"for": "building",
+			"text": "go inside"
+		  },
+		  "leave"
+		]
+	  },
+	  "building": {
+		"id": "building",
+		"title": "a large building",
+		"body": "a large, open building. own the hall, is a room full of tables, chairs and a cashier's counter. there's a door to the basement, and a door to the roof.",
+		"btns": [
+		  {
+			"for": "basement",
+			"text": "go down to the basement"
+		  },
+		  {
+			"for": "diningRoom",
+			"text": "the dining room"
+		  },
+		  {
+			"for": "ceiling",
+			"text": "go to the roof"
+		  },
+		  "leave"
+		]
+	  },
+	  "basement": {
+		"id": "basement",
+		"title": "the basement",
+		"body": "the door to the basement is unlocked, and swings open easily. there's a staircase leading down, but there are no lights that way. this is room full of miscellaneous objects. the walls are plastered with advertisements for the restaurant upstairs.",
+		"btns": [
+		  {
+			"for": "staircase",
+			"text": "go down the stairs"
+		  },
+		  {
+			"for": "building",
+			"text": "the lobby"
+		  },
+		  {
+			"for": "basementLooting",
+			"text": "search area"
+		  }
+		]
+	  },
+	  "diningRoom": {
+		"id": "diningRoom",
+		"title": "the dining room",
+		"body": "the restaurant is large, with a bar in the center and tables surrounding it. the kitchen appears to be large. the placemats are still on the tables, with the chairs still in place.",
+		"btns": [
+		  {
+			"for": "bar",
+			"text": "the bar"
+		  },
+		  {
+			"for": "building",
+			"text": "the lobby"
+		  }
+		]
+	  },
+	  "bar": {
+		"id": "bar",
+		"title": "the bar",
+		"body": "the bar is large, with chairs and tables surrounding it. the counter is littered with bottles and glasses, and the shelves behind it are covered in liquor. there's a small door in the back, leading to the kitchen.",
+		"btns": [
+		  {
+			"for": "kitchen",
+			"text": "the kitchen"
+		  },
+		  {
+			"for": "diningRoom",
+			"text": "the rest of the room"
+		  }
+		]
+	  },
+	  "kitchen": {
+		"id": "kitchen",
+		"title": "the kitchen",
+		"body": "the kitchen is large, with a variety of objects still in place. there's a refrigerator, a sink, a stove, and a large table in the center of the room.",
+		"btns": [
+		  {
+			"for": "diningRoom",
+			"text": "the dining room"
+		  },
+		  {
+			"for": "kitchenLooting",
+			"text": "search room"
+		  }
+		]
+	  },
+	  "kitchenLooting": {
+		"id": "kitchenLooting",
+		"title": "",
+		"body": "the kitchen is large, with a variety of objects still in place.",
+		"loot": true,
+		"nextId": "kitchen",
+		"size": 10,
+		"lootTable": [
+		  {
+			"id": "rusty_knife",
+			"min": 1,
+			"max": 1,
+			"chance": 1
+		  },
+		  {
+			"id": "radio",
+			"min": 1,
+			"max": 1,
+			"chance": 0.5
+		  },
+		  {
+			"id": "plastic",
+			"min": 1,
+			"max": 4,
+			"chance": 0.7
+		  },
+		  {
+			"id": "scrap_metal",
+			"min": 1,
+			"max": 5,
+			"chance": 1
+		  },
+		  {
+			"id": "steel_shard",
+			"min": 1,
+			"max": 4,
+			"chance": 0.8
+		  }
+		]
+	  },
+	  "staircase": {
+		"id": "staircase",
+		"title": "the staricase",
+		"body": "you start to lose vision as you go down the staircase, having to rely on the railing. you keep walking until your legs grow tired. after this, there will be no return.",
+		"btns": [
+		  {
+			"for": "staircase2",
+			"text": "continue"
+		  },
+		  {
+			"for": "basement",
+			"text": "turn back"
+		  }
+		]
+	  },
+	  "basementLooting": {
+		"id": "basementLooting",
+		"title": "",
+		"body": "maybe something valuable is still here.",
+		"loot": true,
+		"nextId": "basement",
+		"size": 10,
+		"lootTable": [
+		  {
+			"id": "wood_stick",
+			"min": 2,
+			"max": 6,
+			"chance": 1
+		  },
+		  {
+			"id": "radio",
+			"min": 1,
+			"max": 1,
+			"chance": 0.2
+		  },
+		  {
+			"id": "scrap_metal",
+			"min": 1,
+			"max": 5,
+			"chance": 0.8
+		  },
+		  {
+			"id": "steel_shard",
+			"min": 2,
+			"max": 7,
+			"chance": 0.8
+		  },
+		  {
+			"id": "rope",
+			"min": 3,
+			"max": 8,
+			"chance": 0.7
+		  },
+		  {
+			"id": "battery",
+			"min": 2,
+			"max": 4,
+			"chance": 0.4
+		  }
+		]
+	  },
+	  "staircase2": {
+		"id": "staircase2",
+		"title": "the staircase",
+		"body": "you keep going down the stairs, clutching the railing. you're legs buckle from exhaustion. as you're about to give up, you notice a dark purple light deep down.",
+		"btns": [
+		  {
+			"for": "falling",
+			"text": "crawl down steps"
+		  }
+		]
+	  },
+	  "falling": {
+		"id": "falling",
+		"title": "the end",
+		"body": "as you begin crawling down the steps, you slip and start rolling down. each step brings you closer to death. each step filled with pain and defeat. you close your eyes, awaiting death.",
+		"btns": [
+		  {
+			"for": "theDoor",
+			"text": "await death"
+		  }
+		]
+	  },
+	  "theDoor": {
+		"id": "theDoor",
+		"title": "the door",
+		"body": "after falling for countless steps, you finally stop. you slowly open your eyes and see a purple glow illuminating from under a door.",
+		"btns": [
+		  {
+			"for": "alienRoom",
+			"text": "struggle through door"
+		  }
+		]
+	  },
+	  "alienRoom": {
+		"id": "alienRoom",
+		"title": "the machine",
+		"body": "you muster your remaining strength to open the door and see a room filled with beautiful shades purple. too beautiful to even describe. in the center is a single button with a sphere next to it.",
+		"btns": [
+		  {
+			"for": "searchAlienRoom",
+			"text": "search room"
+		  },
+		  {
+			"for": "buttonPressed",
+			"text": "press button"
+		  }
+		]
+	  },
+	  "searchAlienRoom": {
+		"id": "searchAlienRoom",
+		"title": "the room",
+		"body": "in the center is a single button with a sphere next to it.",
+		"loot": true,
+		"nextId": "buttonPressed",
+		"size": 10,
+		"lootTable": [
+		  {
+			"id": "alien_fragment",
+			"min": 1,
+			"max": 1,
+			"chance": 1
+		  }
+		]
+	  },
+	  "alienRoom2": {
+		"id": "alienRoom2",
+		"title": "the room",
+		"body": "the room has a single purple button in the middle.",
+		"btns": [
+		  {
+			"for": "searchAlienRoom",
+			"text": "search room"
+		  },
+		  {
+			"for": "",
+			"text": "press button"
+		  }
+		]
+	  },
+	  "buttonPressed": {
+		"id": "buttonPressed",
+		"title": "space",
+		"body": "immediately you're brought into a subconscious state. everything is black, yet you can see yourself. there're new sensations that you've never felt. new beautiful colors engulf your vision. your body starts rising; through the ground, through the basement, through the lobby, through the ceiling, until you reach the sky.",
+		"btns": [
+		  {
+			"for": "awaken",
+			"text": "awaken"
+		  }
+		]
+	  },
+	  "ceiling": {
+		"id": "ceiling",
+		"title": "the rooftop",
+		"body": "the rooftop has needles and bottles scattered around. on the far side, a purple voodoo like circle can be seen.",
+		"btns": [
+		  {
+			"for": "building",
+			"text": "back downstairs"
+		  }
+		]
+	  },
+	  "awaken": {
+		"id": "awaken",
+		"title": "awaken",
+		"body": "as you awaken, your wounds heal. you see yourself falling and begin rejoining with your body on the roof top; after a few moments you regain control over your brain.",
+		"btns": [
+		  {
+			"for": "ceiling",
+			"text": "continue"
+		  }
+		]
+	  }
+	}
+  }
