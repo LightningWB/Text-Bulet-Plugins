@@ -1,0 +1,94 @@
+{
+	"id": "cemetery",
+	"weight": "1",
+	"rooms": {
+	  "main": {
+		"id": "main",
+		"title": "a cemetery",
+		"body": "the wind howls through the empty streets, exploding with dust. every building around this one have collapsed, leaving only the walls of the cemetery standing. an old metal gate stands open, a broken rusty lock laying besides it. inside, the gravestones are all toppled over, and the dead have been dug up and scattered around.",
+		"btns": [
+		  {
+			"for": "gravestone",
+			"text": "investigate the gravestones"
+		  },
+		  {
+			"for": "body",
+			"text": "investigate the bodies"
+		  },
+		  "leave"
+		]
+	  },
+	  "gravestone": {
+		"id": "gravestone",
+		"title": "the gravestones",
+		"body": "the stone slabs have been toppled over, broken apart. each one with a hole before it. there's a small shed in the back, radiating with a putrid odor.",
+		"btns": [
+		  {
+			"for": "shed",
+			"text": "investigate the shed"
+		  },
+		  {
+			"for": "body",
+			"text": "investigate the bodies"
+		  },
+		  "leave"
+		]
+	  },
+	  "body": {
+		"id": "body",
+		"title": "the bodies",
+		"body": "the corpses are torn apart, missing limbs, heads or even entire torsos. they've been dragged out of the graves and piled up in the middle of the cemetery. their clothes are stained with dirt and sweat. there's a small shed in the back, radiating with a putrid odor.",
+		"btns": [
+		  {
+			"for": "shed",
+			"text": "investigate the shed"
+		  },
+		  {
+			"for": "gravestone",
+			"text": "investigate the gravestones"
+		  },
+		  "leave"
+		]
+	  },
+	  "shed": {
+		"id": "shed",
+		"title": "the shed",
+		"body": "the door opens easily. rotted flesh hangs from racks along each wall. salt thrown across the floor. a bloodied axe rests in the corner.",
+		"loot": true,
+		"nextId": "leave",
+		"size": 20,
+		"lootTable": [
+		  {
+			"id": "rope",
+			"min": 1,
+			"max": 5,
+			"chance": 0.8
+		  },
+		  {
+			"id": "axe",
+			"min": 1,
+			"max": 1,
+			"chance": 1
+		  },
+		  {
+			"id": "cloth",
+			"min": 1,
+			"max": 4,
+			"chance": 0.7
+		  },
+		  {
+			"id": "rusty_kinfe",
+			"min": 1,
+			"max": 1,
+			"chance": 0.4
+		  },
+		  {
+			"id": "scrap_metal",
+			"min": 1,
+			"max": 3,
+			"chance": 0.5
+		  }
+		]
+	  }
+	}
+  }

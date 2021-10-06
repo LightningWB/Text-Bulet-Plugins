@@ -1,0 +1,96 @@
+{
+	"id": "police-station",
+	"weight": "1",
+	"rooms": {
+	  "main": {
+		"id": "main",
+		"title": "a police station",
+		"body": "a small walled-in compound stands out against the dead world. the gate is hanging open, and the station inside is still lit. the desks are unorganized, the computers are still on, and the doors are unlocked. there's a single door leading to an unknown room, and another leading to the office.",
+		"btns": [
+		  {
+			"for": "other",
+			"text": "the other room"
+		  },
+		  {
+			"for": "office",
+			"text": "office"
+		  },
+		  "leave"
+		]
+	  },
+	  "other": {
+		"id": "other",
+		"title": "the other room",
+		"body": "a single holding cell is open to visitors, but there's no one inside. just a single book on the floor. it reads \"we are doomed, but it isn't too late. there is still good in the world. if we want it, we can make it happen.\"",
+		"btns": [
+		  {
+			"for": "office",
+			"text": "the office"
+		  },
+		  "leave"
+		]
+	  },
+	  "office": {
+		"id": "office",
+		"title": "the office",
+		"body": "a single desk is still organized, with papers arranged in neat piles. the computer has been left on, and there's a single email open. it reads \"we are the police. we are the good guys. we're fighting the good fight. it is all of us against them. for the future of the world, we will bring them to justice. justice for everyone. justice for the earth. justice for the future. justice for the children. justice for all.\"",
+		"btns": [
+		  {
+			"for": "other",
+			"text": "the other room"
+		  },
+		  {
+			"for": "searching",
+			"text": "search area"
+		  },
+		  "leave"
+		]
+	  },
+	  "searching": {
+		"id": "searching",
+		"title": "the office",
+		"body": "maybe something useful is still here.",
+		"loot": true,
+		"nextId": "leave",
+		"size": 30,
+		"lootTable": [
+		  {
+			"id": "pistol",
+			"min": 1,
+			"max": 1,
+			"chance": 0.6
+		  },
+		  {
+			"id": "bullet",
+			"min": 1,
+			"max": 4,
+			"chance": 0.8
+		  },
+		  {
+			"id": "cloth",
+			"min": 1,
+			"max": 4,
+			"chance": 0.6
+		  },
+		  {
+			"id": "scrap_metal",
+			"min": 1,
+			"max": 3,
+			"chance": 0.6
+		  },
+		  {
+			"id": "steel_shard",
+			"min": 1,
+			"max": 4,
+			"chance": 0.6
+		  },
+		  {
+			"id": "syringe",
+			"min": 1,
+			"max": 2,
+			"chance": 0.2
+		  }
+		]
+	  }
+	}
+  }

@@ -1,0 +1,70 @@
+{
+	"id": "diner",
+	"weight": "1",
+	"rooms": {
+	  "dining-area": {
+		"id": "dining-area",
+		"title": "the dining room",
+		"body": "a long table is set up in the center of the room, surrounded by benches. it looks like this was once used for eating, but the only thing on it now is dust.",
+		"btns": [
+		  {
+			"for": "kitchen",
+			"text": "the kitchen"
+		  },
+		  "leave"
+		]
+	  },
+	  "kitchen": {
+		"id": "kitchen",
+		"title": "a kitchen",
+		"body": "the kitchen is in disarray, with empty cans, broken glass and cooking utensils covering the floor.",
+		"loot": true,
+		"nextId": "leave",
+		"size": 25,
+		"lootTable": [
+		  {
+			"id": "rusty_knife",
+			"min": 1,
+			"max": 1,
+			"chance": 1
+		  },
+		  {
+			"id": "plastic",
+			"min": 1,
+			"max": 3,
+			"chance": 0.5
+		  },
+		  {
+			"id": "scrap_metal",
+			"min": 1,
+			"max": 6,
+			"chance": 0.8
+		  },
+		  {
+			"id": "steel_shard",
+			"min": 1,
+			"max": 4,
+			"chance": 0.8
+		  },
+		  {
+			"id": "bullet",
+			"min": 1,
+			"max": 2,
+			"chance": 0.2
+		  }
+		]
+	  },
+	  "main": {
+		"id": "main",
+		"title": "an old structure",
+		"body": "a small structure juts out of the ashen wasteland; the windows are all destroyed. a broken sign lays next to the entrance, too faded to be read.",
+		"btns": [
+		  {
+			"for": "dining-area",
+			"text": "enter through the window"
+		  },
+		  "leave"
+		]
+	  }
+	}
+  }

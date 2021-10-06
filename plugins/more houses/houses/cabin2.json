@@ -1,0 +1,70 @@
+{
+	"id": "cabin2",
+	"weight": "1",
+	"rooms": {
+	  "main": {
+		"id": "main",
+		"title": "a cabin",
+		"body": "the cabin has been constructed from fallen logs, sturdy but still rotting from the damp earth. it's a one room building with a fireplace and a bed, and a single window looking out over a cliff side. a rotted shotgun leans against the wall near the door.",
+		"btns": [
+		  {
+			"for": "bed",
+			"text": "the bedroom"
+		  },
+		  {
+			"for": "fireplace",
+			"text": "the fireplace"
+		  },
+		  "leave"
+		]
+	  },
+	  "bed": {
+		"id": "bed",
+		"title": "a bed",
+		"body": "the mattress is old and stained, but still soft. it's hard to imagine a family once lived here, but the sheets match and there are still pillows.",
+		"btns": [
+		  {
+			"for": "window",
+			"text": "look out the window"
+		  },
+		  {
+			"for": "main",
+			"text": "the living room"
+		  }
+		]
+	  },
+	  "fireplace": {
+		"id": "fireplace",
+		"title": "a fireplace",
+		"body": "the fireplace is cold and black, but there's still a few logs nearby. the axe leaning against the wall is still sharp, and the wood is soft enough to cut through with a few swings.",
+		"loot": true,
+		"nextId": "main",
+		"size": 15,
+		"lootTable": [
+		  {
+			"id": "axe",
+			"min": 1,
+			"max": 1,
+			"chance": 1
+		  },
+		  {
+			"id": "wood_stick",
+			"min": 3,
+			"max": 7,
+			"chance": 1
+		  }
+		]
+	  },
+	  "window": {
+		"id": "window",
+		"title": "a window",
+		"body": "the window is small and square, and looks out over a cliffside. a cold wind blowing through the glass pane.",
+		"btns": [
+		  {
+			"for": "main",
+			"text": "the living room"
+		  }
+		]
+	  }
+	}
+  }

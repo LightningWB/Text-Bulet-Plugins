@@ -1,0 +1,61 @@
+{
+	"id": "gas-station",
+	"weight": "1",
+	"rooms": {
+	  "main": {
+		"id": "main",
+		"title": "a gas station",
+		"body": "a rusted metal structure, its roof caved in, is surrounded by dead trees. the glass windows are long gone. there's a faint smell of gas in the air. some boxes are nearby.",
+		"btns": [
+		  {
+			"for": "gas-station",
+			"text": "the boxes"
+		  },
+		  {
+			"for": "inside",
+			"text": "go inside"
+		  },
+		  "leave"
+		]
+	  },
+	  "gas-station": {
+		"id": "gas-station",
+		"title": "a gas station",
+		"body": "the boxes turn out to be gas pumps. the sign reads \"rancho oil.\" you try to activate one; despite your best efforts, no gas comes out. maybe something more useful is inside.",
+		"btns": [
+		  {
+			"for": "inside",
+			"text": "go inside"
+		  }
+		]
+	  },
+	  "inside": {
+		"id": "inside",
+		"title": "inside",
+		"body": "the store is relatively intact. while the food and water is long gone, bullets of varying sizes line the shelves behind the counter.",
+		"loot": true,
+		"nextId": "leave",
+		"size": 30,
+		"lootTable": [
+		  {
+			"id": "bullet",
+			"min": 1,
+			"max": 15,
+			"chance": 1
+		  },
+		  {
+			"id": "shotgun_shell",
+			"min": 1,
+			"max": 4,
+			"chance": 0.6
+		  },
+		  {
+			"id": "pistol",
+			"min": 1,
+			"max": 1,
+			"chance": 0.1
+		  }
+		]
+	  }
+	}
+}

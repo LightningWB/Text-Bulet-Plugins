@@ -1,0 +1,70 @@
+{
+	"id": "concrete",
+	"weight": "1",
+	"rooms": {
+	  "main": {
+		"id": "main",
+		"title": "a concrete structure",
+		"body": "the main entrance has been sealed with a metal door, but the thick concrete walls are covered in cracks and holes, allowing for easy entrance.",
+		"btns": [
+		  {
+			"for": "office",
+			"text": "enter structure"
+		  },
+		  "leave"
+		]
+	  },
+	  "office": {
+		"id": "office",
+		"title": "an office",
+		"body": "a desk and filing cabinet are the only things left inside the room. the desk is covered in dust, but the cabinet has been left alone. there's a computer on the desk, with a single window open.",
+		"btns": [
+		  {
+			"for": "text",
+			"text": "the computer"
+		  },
+		  "leave"
+		]
+	  },
+	  "text": {
+		"id": "text",
+		"title": "a text file",
+		"body": "a quick message is typed out on the screen.<span class=\"doc\">if you're reading this, please turn off the computer and leave. i know i'm a coward for leaving a message like this, but i'm afraid. i've been hearing voices at night, and i think they're coming from outside. i can't go out there. i don't know who or what is out there. i'm going to hide in the cabinet until they go away. if they find me, i don't know what they'll do. please, please turn off the computer and leave. <br></span>the file's properties reveal it was written about 200 years ago.",
+		"btns": [
+		  {
+			"for": "cabinet",
+			"text": "the cabinet"
+		  },
+		  "leave"
+		]
+	  },
+	  "cabinet": {
+		"id": "cabinet",
+		"title": "the cabinet",
+		"body": "a pile of bones lie in the cabinet. maybe something else is hiding here.",
+		"loot": true,
+		"nextId": "leave",
+		"size": 10,
+		"lootTable": [
+		  {
+			"id": "cloth",
+			"min": 1,
+			"max": 6,
+			"chance": 1
+		  },
+		  {
+			"id": "radio",
+			"min": 1,
+			"max": 1,
+			"chance": 0.1
+		  },
+		  {
+			"id": "plastic",
+			"min": 0,
+			"max": 5,
+			"chance": 1
+		  }
+		]
+	  }
+	}
+  }
