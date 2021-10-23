@@ -4,7 +4,7 @@ const plug = bullet.makePlugin('tile_descriptions');
 
 bullet.patches.addJs(`
 WORLD.tileDescriptions = {};
-WORLD.returnTileDesc = (el) => WORLD.tileDescriptions[el.innerHtml] || 'unsure of this location';
+WORLD.returnTileDesc = (el) => WORLD.tileDescriptions[el.innerHTML] || 'unsure of this location';
 `.trim());
 
 plug.on('tileDescriptors::addTileDescription', (char, desc) => {
