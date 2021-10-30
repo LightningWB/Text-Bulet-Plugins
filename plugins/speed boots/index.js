@@ -1,4 +1,17 @@
-const speedBoost = 10;
+const bullet = require('./bullet');
+const plugin = bullet.makePlugin('SpeedBoots');
+
+const config = plugin.loadConfig({
+	header: 'Speed Boots\nby LightningWB',
+	options: {
+		speedBoost: {
+			allowed: 'Integer',
+			default: 5,
+			description: 'The speed boost multiplier.',
+		}
+	}
+});
+
 const speedBoots = {
 	name: 'speedBoots',
 	title: 'speed boots',
@@ -7,11 +20,9 @@ const speedBoots = {
 	icon: '⊾',
 	desc: 'so weightless; even touching it makes you feel lighter.',
 	func: true,
-	func_desc: 'with these boots on, you can run ' + speedBoost + 'x faster than ever before.'
+	func_desc: 'with these boots on, you can run ' + config.speedBoost + 'x faster than ever before.'
 }
 
-const bullet = require('./bullet');
-const plugin = bullet.makePlugin('SpeedBoots');
 
 function getPlayerSpeed(player, out) {
 	if(player.public.equipped === speedBoots.name) {
