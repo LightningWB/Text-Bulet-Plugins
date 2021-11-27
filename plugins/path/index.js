@@ -52,4 +52,5 @@ plug.on('ready', () => {
 	bullet.emit('travelers', 'addGameItem', pathItem.name, pathItem);
 	bullet.emit('travelers', 'addStructureData', pathStructure);
 	bullet.emit('travelers', 'addCraftableItem', pathItem.name, 34);
+	bullet.emit('tileDescriptors', 'addTileDescription', pathStructure.char, 'a wooden path that enables faster travel.');
 });
