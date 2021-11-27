@@ -140,7 +140,7 @@
 	  },
 	  "staircase": {
 		"id": "staircase",
-		"title": "the staricase",
+		"title": "the staircase",
 		"body": "you start to lose vision as you go down the staircase, having to rely on the railing. you keep walking until your legs grow tired. after this, there will be no return.",
 		"btns": [
 		  {
@@ -303,7 +303,7 @@
 	  "awaken": {
 		"id": "awaken",
 		"title": "awaken",
-		"body": "as you awaken, your wounds heal. you see yourself falling and begin rejoining with your body on the roof top; after a few moments you regain control over your brain.",
+		"body": "as you awaken, your wounds quickly mend, as you fall. after a few moments you regain control over your brain and rejoin your body.",
 		"btns": [
 		  {
 			"for": "ceiling",
