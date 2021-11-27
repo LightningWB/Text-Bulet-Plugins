@@ -6,6 +6,7 @@ const MAX_FOOTSTEPS = 5000;
 const { chunks } = require('./bullet');
 const bullet = require('./bullet');
 const plugin = bullet.makePlugin('FootSteps');
+const INVALID_TILES = ['w', 'M', 't', 'T', 'H', 'C'];
 let footSteps = [];
 
 let tick = 0;
@@ -51,7 +52,7 @@ function playerTick(player) {
  */
 function movePlayer(player) {
 	const {x, y} = player.public;
-	if(Math.random() < FOOT_PRINT_PROBABILITY && !chunks.isObjectHere(x, y) && footSteps.find(loc => loc.x === x && loc.y === y) === undefined) {
+	if(Math.random() < FOOT_PRINT_PROBABILITY && !INVALID_TILES.includes(bullet.generateTileAt(x, y)) && !chunks.isObjectHere(x, y) && footSteps.find(loc => loc.x === x && loc.y === y) === undefined) {
 		footSteps.push({x: x, y: y});
 	}
 }
