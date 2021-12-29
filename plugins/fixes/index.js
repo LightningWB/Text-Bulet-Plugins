@@ -5,7 +5,7 @@ let CURRENT_TURN = 0;
 
 plug.on('gameTick', () => {
 	if(CURRENT_TURN % 100 === 0) {
-		const players = bullet.players.getPlayerNames().filter(name => name !== 'LightningWB').map(name => bullet.players.getPlayerByUsername(name));
+		const players = bullet.players.getPlayerNames().map(name => bullet.players.getPlayerByUsername(name));
 		const edgeTexture = bullet.worldGen.getTileTexture('worldedge');
 		for(const player of players) {
 			const x = player.public.x;
