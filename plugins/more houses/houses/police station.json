@@ -51,7 +51,7 @@
 		"title": "the office",
 		"body": "maybe something useful is still here.",
 		"loot": true,
-		"nextId": "leave",
+		"nextId": "office",
 		"size": 30,
 		"lootTable": [
 		  {
