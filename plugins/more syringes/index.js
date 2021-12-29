@@ -153,8 +153,8 @@ plugin.on('equip_actions::adrenalineShot::inject', (player) => {
 });
 
 plugin.on('equip_actions::xpShot::inject', (player) => {
-	player.public.skills.xp += 250;
-	player.temp.gained_xp = 250;
+	player.public.skills.xp += 100;
+	player.temp.gained_xp = 100;
 	player.addPropToQueue('skills', 'gained_xp');
 	bullet.emit('travelers', 'takePlayerItem', 'xpShot', 1, player);
 	if(!(player.private.supplies.xpShot > 0)) {
