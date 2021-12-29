@@ -1,0 +1,26 @@
+{
+	"id": "valley",
+	"weight": "1",
+	"rooms": {
+	  "main": {
+		"id": "main",
+		"title": "the valley",
+		"body": "the mountains end unnaturally, forming a perfectly square valley. a deep purple glow covers the valley; a small cube in the center is the only variation.",
+		"btns": [
+		  {
+			"for": "the-box",
+			"text": "the box"
+		  },
+		  "leave"
+		]
+	  },
+	  "the-box": {
+		"id": "the-box",
+		"title": "the message",
+		"body": "a single message is engraved on the surface.<span class=\"doc\">go south of here until you reach a pond in a forest clearing. when you reach with the shore, dig to uncover the facility.<br></span>",
+		"btns": [
+		  "leave"
+		]
+	  }
+	}
+  }

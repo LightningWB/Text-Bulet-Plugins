@@ -1,0 +1,57 @@
+{
+	"id": "structure_automated_turret",
+	"weight": "1",
+	"rooms": {
+	  "main": {
+		"id": "main",
+		"title": "automated turret",
+		"body": "3 buttons are lit up on the crude interface for the sentry.",
+		"btns": [
+		  {
+			"for": "protectedPlayers",
+			"text": "view ignored players"
+		  },
+		  {
+			"for": "manage-players",
+			"text": "manage ignored players"
+		  },
+		  {
+			"for": "bulletStorage",
+			"text": "open ammunition container"
+		  },
+		  "leave"
+		]
+	  },
+	  "protectedPlayers": {
+		"id": "protectedPlayers",
+		"title": "ignored players",
+		"body": "<span class=\"doc\">[IGNORED_PLAYERS]<br></span>",
+		"btns": [
+		  {
+			"for": "main",
+			"text": "main menu"
+		  }
+		]
+	  },
+	  "bulletStorage": {
+		"id": "bulletStorage",
+		"title": "bullet storage",
+		"body": "a door slides open, revealing a small container for ammunition.",
+		"loot": true,
+		"nextId": "main",
+		"size": 500,
+		"lootTable": []
+	  },
+	  "manage-players": {
+		"id": "manage-players",
+		"title": "manage players",
+		"body": "2 buttons light up.<br><input type=\"button\" onclick=\"MSG.open('add a traveler to ignore.', 'username', 16, 'add', 'cancel', 'addPlayerToTurretList');\" value=\"add player\"><br><input type=\"button\" onclick=\"MSG.open('remove a traveler from the ignore list.', 'username', 16, 'remove', 'cancel', 'removePlayerFromTurretList');\" value=\"remove player\">",
+		"btns": [
+		  {
+			"for": "main",
+			"text": "main menu"
+		  }
+		]
+	  }
+	}
+  }

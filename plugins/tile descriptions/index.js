@@ -8,7 +8,7 @@ WORLD.returnTileDesc = (el) => WORLD.tileDescriptions[el.innerHTML] || 'unsure o
 `.trim());
 
 plug.on('tileDescriptors::addTileDescription', (char, desc) => {
-	bullet.patches.addJs(`WORLD.tileDescriptions['${char}'] = "${desc.replace(/"/g, '\\"')}"`);
+	bullet.patches.addJs(`WORLD.tileDescriptions['${char}'] = ${JSON.stringify(desc)};`);
 });
 
 bullet.emit('tileDescriptors', 'addTileDescription', '&nbsp;', 'sandy plains mixed with ash, forming a dull brown mixture that your feet sink slightly into with every step.');

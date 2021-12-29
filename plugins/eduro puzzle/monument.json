@@ -1,0 +1,14 @@
+{
+	"id": "monument",
+	"weight": "1",
+	"rooms": {
+	  "main": {
+		"id": "main",
+		"title": "the monument",
+		"body": "a colossal structure reaches for the sky, its surface a translucent and deep purple. it is cool to the touch, and at eye level, an engraving has been etched into the hard rock.[[image]]",
+		"btns": [
+		  "leave"
+		]
+	  }
+	}
+  }

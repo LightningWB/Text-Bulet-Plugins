@@ -1,0 +1,14 @@
+{
+	"id": "alarm",
+	"weight": "1",
+	"rooms": {
+	  "main": {
+		"id": "main",
+		"title": "emergency broadcast tower",
+		"body": "<span class=\"doc\">current frequency:[[FREQUENCY]]<br>name:[[NAME]]<br><br>trusted players<br>[[IGNORED_PLAYERS]]<br></span><input type=\"button\" onclick=\"MSG.open('enter any nine-character code to set an encryption channel. if you enter a blank code, it will be reset to transmit without encryption.', 'encryption code', 9, 'set channel', 'cancel', 'alarmSetChannel');\" value=\"set encryption code\"><br><input type=\"button\" onclick=\"MSG.open('set the alarm name.', 'name', 16, 'set', 'cancel', 'setAlarmName');\" value=\"set name\"><br><input type=\"button\" onclick=\"MSG.open('add a traveler to trust.', 'username', 16, 'add', 'cancel', 'addPlayerToAlarm');\" value=\"add player\"><br><input type=\"button\" onclick=\"MSG.open('remove a traveler from the trust list.', 'username', 16, 'remove', 'cancel', 'removePlayerFromAlarm');\" value=\"remove player\">",
+		"btns": [
+		  "leave"
+		]
+	  }
+	}
+  }

@@ -1,0 +1,15 @@
+{
+	"id": "structure_steel_crate",
+	"weight": "1",
+	"rooms": {
+	  "main": {
+		"id": "main",
+		"title": "metal crate",
+		"body": "some space.",
+		"loot": true,
+		"nextId": "leave",
+		"size": 500,
+		"lootTable": []
+	  }
+	}
+  }

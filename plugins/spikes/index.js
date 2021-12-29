@@ -104,4 +104,7 @@ plug.on('ready', () => {
 	bullet.emit('travelers', 'addGameItem', woodSpikeItemData.name, woodSpikeItemData);
 	bullet.emit('travelers', 'addStructureData', woodSpikeStructureData);
 	bullet.emit('travelers', 'addCraftableItem', woodSpikeItemData.name, 29);
+
+	bullet.emit('tileDescriptors', 'addTileDescription', steelSpikeItemData.icon, 'a steel spike capable of dealing large amounts of damage.');
+	bullet.emit('tileDescriptors', 'addTileDescription', woodSpikeItemData.icon, 'a wooden spike capable of dealing damage.');
 });

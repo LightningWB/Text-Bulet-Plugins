@@ -26,7 +26,7 @@ const speedBoots = {
 
 function getPlayerSpeed(player, out) {
 	if(player.public.equipped === speedBoots.name) {
-		out.set(out.get() * speedBoost);
+		out.set(out.get() * config.speedBoost);
 	}
 }
 

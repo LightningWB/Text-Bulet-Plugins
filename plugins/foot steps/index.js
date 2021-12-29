@@ -66,3 +66,6 @@ plugin.on('gameTick', () => {
 }, -10);
 plugin.on('playerTick', playerTick, -10);
 plugin.on('travelers::onPlayerStep', movePlayer, -10);
+plugin.on('ready', () => {
+	bullet.emit('tileDescriptors', 'addTileDescription', FOOT_PRINT_TEXTURE, 'a footprint.');
+})

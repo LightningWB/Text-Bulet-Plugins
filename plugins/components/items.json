@@ -1,0 +1,302 @@
+[
+	{
+		"name": "antenna",
+		"title": "antenna",
+		"type": "misc",
+		"weight": 2,
+		"icon": "↲",
+		"desc": "a small antenna with programmable inputs and outputs. capable of being rigged up to many different machines",
+		"craft": true,
+		"craft_time": 60,
+		"craft_data": {
+			"scrap_metal": {
+				"count": 3,
+				"title": "scrap metal"
+			},
+			"wire": {
+				"count": 3,
+				"title": "wire"
+			},
+			"copper_coil": {
+				"count": 1,
+				"title": "copper coil"
+			}
+		}
+	},
+	{
+		"name": "world_analyzer",
+		"title": "world analyzer",
+		"type": "tool",
+		"weight": 10,
+		"icon": "⧪",
+		"desc": "calculates the distance between you and the border",
+		"craft": true,
+		"craft_time": 180,
+		"craft_data": {
+			"antenna": {
+				"count": 1,
+				"title": "antenna"
+			},
+			"circuit_board": {
+				"count": 1,
+				"title": "circuit board"
+			},
+			"battery": {
+				"count": 1,
+				"title": "energy cell"
+			}
+		},
+		"func": true,
+		"func_desc": "calculates the distance between you and the border",
+		"func_actions": {
+			"scan": {
+				"server": "scan",
+				"btn_text": "scan"
+			}
+		}
+	},
+	{
+		"name": "enhanced_baseball_bat",
+		"title": "spiked baseball bat",
+		"type": "weap",
+		"weight": 10,
+		"icon": "-≠≠",
+		"desc": "once used for sport, this bat now serves as a weapon covered with shards of steel.",
+		"craft": true,
+		"craft_time": 60,
+		"craft_data": {
+			"steel_shard": {
+				"count": 7,
+				"title": "steel shard"
+			},
+			"baseball_bat": {
+				"count": 1,
+				"title": "baseball bat"
+			}
+		},
+		"weapon": true,
+		"weapon_data": {
+			"dmg": 19,
+			"sp": 14
+		}
+	},
+	{
+		"name": "dagger",
+		"title": "dagger",
+		"type": "weap",
+		"weight": 5,
+		"icon": "†",
+		"desc": "a carefully crafted knife with a small, sharp blade",
+		"craft": true,
+		"craft_time": 120,
+		"craft_data": {
+			"steel_shard": {
+				"count": 5,
+				"title": "steel shard"
+			},
+			"scrap_metal": {
+				"count": 3,
+				"title": "scrap metal"
+			},
+			"wood_stick": {
+				"count": 1,
+				"title": "wood stick"
+			}
+		},
+		"weapon": true,
+		"weapon_data": {
+			"dmg": 12,
+			"sp": 8
+		}
+	},
+	{
+		"name": "wooden_sword",
+		"title": "wooden sword",
+		"type": "weap",
+		"weight": 25,
+		"icon": "⍖",
+		"desc": "a simple, blunt wooden sword.",
+		"craft": true,
+		"craft_time": 45,
+		"craft_data": {
+			"wood_stick": {
+				"count": 20,
+				"title": "wood stick"
+			},
+			"scrap_metal": {
+				"count": 1,
+				"title": "scrap metal"
+			}
+		},
+		"weapon": true,
+		"weapon_data": {
+			"dmg": 20,
+			"sp": 19
+		}
+	},
+	{
+		"name": "wrench",
+		"title": "wrench",
+		"type": "tool",
+		"weight": 8,
+		"icon": "?",
+		"desc": "a simple tool capable on interacting with some machines.",
+		"craft": true,
+		"craft_time": 60,
+		"craft_data": {
+			"scrap_metal": {
+				"count": 5,
+				"title": "scrap metal"
+			},
+			"wood_stick": {
+				"count": 1,
+				"title": "wood stick"
+			}
+		},
+		"func": true,
+		"func_desc": "interacts with a capable machine.",
+		"func_actions": {
+			"interact": {
+				"server": "interact",
+				"btn_text": "interact"
+			}
+		},
+		"weapon": true,
+		"weapon_data": {
+			"dmg": 10,
+			"sp": 10
+		}
+	},
+	{
+		"name": "steel_crate",
+		"title": "steel box",
+		"type": "build",
+		"weight": 35,
+		"icon": "⧅",
+		"desc": "a sturdy steel box that can contain a small amount of items.",
+		"craft": true,
+		"craft_time": 60,
+		"craft_data": {
+			"steel_shard": {
+				"count": 10,
+				"title": "steel shard"
+			},
+			"scrap_metal": {
+				"count": 5,
+				"title": "scrap metal"
+			}
+		},
+		"break_time": 600,
+		"build": true,
+		"build_desc": "a sturdy steel box that can contain a small amount of items."
+	},
+	{
+		"name": "automated_turret",
+		"title": "automated turret",
+		"type": "build",
+		"weight": 100,
+		"icon": "⍑",
+		"desc": "an automated turret on a tower that will shoot at all enemies within 10 tiles, dealing 20-25 damage per shot. requires bullets to function.",
+		"craft": true,
+		"craft_time": 3600,
+		"craft_data": {
+			"scrap_metal": {
+				"count": 20,
+				"title": "scrap metal"
+			},
+			"wire": {
+				"count": 10,
+				"title": "wire"
+			},
+			"circuit_board": {
+				"count": 3,
+				"title": "circuit board"
+			},
+			"charged_core": {
+				"count": 1,
+				"title": "charged core"
+			},
+			"control_panel": {
+				"count": 1,
+				"title": "control panel"
+			},
+			"pistol": {
+				"count": 1,
+				"title": "pistol"
+			},
+			"steel_crate": {
+				"count": 1,
+				"title": "steel box"
+			}
+		},
+		"break_time": 60,
+		"build": true,
+		"build_desc": "an automated turret on a tower that will shoot at all enemies within 10 tiles, dealing 20-25 damage per shot. requires bullets to function. it can shoot over walls."
+	},
+	{
+		"name": "bulletProofArmor",
+		"title": "bulletproof gear",
+		"type": "tool",
+		"weight": 25,
+		"icon": "☊",
+		"desc": "a set of gear that prevents 50% of incoming bullet damage.",
+		"func": true,
+		"func_desc": "prevents 50% of incoming bullet damage."
+	},
+	{
+		"name": "radio_tower",
+		"title": "radio tower",
+		"type": "build",
+		"weight": 100,
+		"icon": "⟟",
+		"desc": "a radio tower that can receive messages and play them for nearby players.",
+		"craft": true,
+		"craft_time": 3600,
+		"craft_data": {
+			"scrap_metal": {
+				"count": 20,
+				"title": "scrap metal"
+			},
+			"wire": {
+				"count": 10,
+				"title": "wire"
+			},
+			"circuit_board": {
+				"count": 3,
+				"title": "circuit board"
+			},
+			"charged_core": {
+				"count": 1,
+				"title": "charged core"
+			},
+			"control_panel": {
+				"count": 1,
+				"title": "control panel"
+			},
+			"radio": {
+				"count": 1,
+				"title": "radiowave transmitter"
+			}
+		},
+		"break_time": 3600,
+		"build": true,
+		"build_desc": "a radio tower that can receive messages and play them for nearby players."
+	},
+	{
+		"name": "unknown_material_particle",
+		"title": "unknown material particle",
+		"type": "rare",
+		"weight": 1,
+		"icon": "⧫",
+		"desc": "a glowing bright purple particle, its hue shifting slightly when viewed from different angles.",
+		"craft": true,
+		"craft_time": 5,
+		"craft_data": {
+			"alien_fragment": {
+				"count": 1,
+				"title": "unknown material fragment"
+			}
+		},
+		"craft_makes": 10
+	}
+]

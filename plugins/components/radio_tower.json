@@ -1,0 +1,14 @@
+{
+	"id": "structure_radio_tower",
+	"weight": "1",
+	"rooms": {
+	  "main": {
+		"id": "main",
+		"title": "airwave reader",
+		"body": "<span class=\"doc\">current frequency:[[FREQUENCY]]<br></span><input type=\"button\" onclick=\"MSG.open('enter any nine-character code to set an encryption channel. if you enter a blank code, it will be reset to transmit without encryption.', 'encryption code', 9, 'set channel', 'cancel', 'radioSetTower');\" value=\"set encryption code\">",
+		"btns": [
+		  "leave"
+		]
+	  }
+	}
+  }
