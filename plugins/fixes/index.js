@@ -79,4 +79,6 @@ bullet.patches.addPatch('MSG.close', '{', '{if(YOU.state === "event"){POPUP.evBo
 bullet.patches.addPatch('MSG.open', '{', '{if(YOU.state === "event"){POPUP.evBox.style.display = "none";POPUP.evBlock.style.display = "none";clearInterval(EVENTS.leaveEventCountdown);}', false);
 bullet.patches.addPatch('ENGINE.log', 'MOBILE.notif("event");', 'MOBILE.notif("event");const pp=ENGINE.console;for(const p of pp.children){const children=p.children;for(const c of children)if(c.tagName==="INPUT")p.removeChild(c);}');
 
-// todo childcare
+// if you have a bp and the recipe unlocked
+bullet.patches.addPatch('CRAFTING.setHtml', 'let miscText = []', 'const added = [];let miscText = []', false);
+bullet.patches.addPatch('CRAFTING.setHtml', 'switch (type) {', 'if(added.includes(job.name)){return;}added.push(job.name);switch (type) {', false);
