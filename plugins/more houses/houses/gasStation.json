@@ -35,7 +35,7 @@
 		"body": "the store is relatively intact. while the food and water is long gone, bullets of varying sizes line the shelves behind the counter.",
 		"loot": true,
 		"nextId": "leave",
-		"size": 30,
+		"size": 100,
 		"lootTable": [
 		  {
 			"id": "bullet",
