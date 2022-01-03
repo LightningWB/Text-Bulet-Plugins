@@ -68,6 +68,16 @@ function movePlayer(player) {
 	}
 }
 
+plugin.on('equip_actions::shovel::fill', (player) => {
+	const {x, y} = player.public;
+	const originalLength = footSteps.length;
+	footSteps = footSteps.filter(loc => loc.x !== x || loc.y !== y);
+	if(originalLength !== footSteps.length) {
+		bullet.emit('travelers', 'eventLog', 'after a few minutes of leveling, the footprint is now undistinguishable from the surrounding terrain.', player);
+		return false;
+	}
+}, 10);
+
 plugin.on('gameTick', () => {
 	tick++;
 	while(footSteps.length > MAX_FOOTSTEPS) {
