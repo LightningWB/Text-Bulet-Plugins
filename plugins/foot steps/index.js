@@ -1,6 +1,6 @@
 // config
-const FOOT_PRINT_TEXTURE = '⏝';
-const FOOT_PRINT_PROBABILITY = .02;
+const FOOT_PRINT_TEXTURE = '⋂';
+const FOOT_PRINT_PROBABILITY = .015;
 const MAX_FOOTSTEPS = 5000;
 
 const { chunks } = require('./bullet');
@@ -10,6 +10,17 @@ const INVALID_TILES = ['w', 'M', 't', 'T', 'H', 'C'];
 let footSteps = [];
 
 let tick = 0;
+
+let dirToChar = {
+	'n': '<span>' + FOOT_PRINT_TEXTURE + '</span>',
+	'e': '<span style="transform:rotate(90deg);display:inline-block;">' + FOOT_PRINT_TEXTURE + '</span>',
+	's': '<span style="transform:rotate(180deg);display:inline-block;">' + FOOT_PRINT_TEXTURE + '</span>',
+	'w': '<span style="transform:rotate(270deg);display:inline-block;">' + FOOT_PRINT_TEXTURE + '</span>',
+	'ne': '<span style="transform:rotate(45deg);display:inline-block;">' + FOOT_PRINT_TEXTURE + '</span>',
+	'nw': '<span style="transform:rotate(315deg);display:inline-block;">' + FOOT_PRINT_TEXTURE + '</span>',
+	'se': '<span style="transform:rotate(135deg);display:inline-block;">' + FOOT_PRINT_TEXTURE + '</span>',
+	'sw': '<span style="transform:rotate(225deg);display:inline-block;">' + FOOT_PRINT_TEXTURE + '</span>'
+};
 
 /**
  * @param {bullet.players.player} player
@@ -37,7 +48,7 @@ function playerTick(player) {
 			objs.push({
 				x: print.x,
 				y: print.y,
-				char: FOOT_PRINT_TEXTURE,
+				char: print.char,
 				is_breakable: false,
 				is_door: false,
 				walk_over: true
@@ -52,8 +63,8 @@ function playerTick(player) {
  */
 function movePlayer(player) {
 	const {x, y} = player.public;
-	if(Math.random() < FOOT_PRINT_PROBABILITY && !INVALID_TILES.includes(bullet.generateTileAt(x, y)) && !chunks.isObjectHere(x, y) && footSteps.find(loc => loc.x === x && loc.y === y) === undefined) {
-		footSteps.push({x: x, y: y});
+	if(Math.random() < FOOT_PRINT_PROBABILITY && !INVALID_TILES.includes(bullet.generateTileAt(x, y)) && !chunks.isObjectHere(x, y) && footSteps.find(loc => loc.x === x && loc.y === y) === undefined && player?.cache?.travelData?.dir !== '') {
+		footSteps.push({x: x, y: y, char: dirToChar[player.cache.travelData.dir]});
 	}
 }
 
