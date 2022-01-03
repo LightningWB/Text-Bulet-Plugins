@@ -27,7 +27,7 @@ const steelSpikeItemData = {
 			title: 'rope'
 		}
 	},
-	breakTime: TPS * 60 * 5,
+	break_time: TPS * 60 * 5,
 	build: true,
 	build_desc: 'a spike capable of dealing major damage to anyone who stands on it.'
 };
@@ -51,7 +51,7 @@ const woodSpikeItemData = {
 			title: 'scrap metal'
 		}
 	},
-	breakTime: TPS * 60,// 1 minute
+	break_time: TPS * 60,// 1 minute
 	build: true,
 	build_desc: 'a spike capable of dealing minor damage to anyone who stands on it.'
 };
@@ -61,7 +61,7 @@ const steelSpikeStructureData = {
 	placingItem: steelSpikeItemData.name,
 	char: steelSpikeItemData.icon,
 	isBreakable: true,
-	breakTime: steelSpikeItemData.breakTime// five minutes
+	breakTime: steelSpikeItemData.break_time// five minutes
 };
 
 const woodSpikeStructureData = {
@@ -69,7 +69,7 @@ const woodSpikeStructureData = {
 	placingItem: woodSpikeItemData.name,
 	char: woodSpikeItemData.icon,
 	isBreakable: true,
-	breakTime: woodSpikeItemData.breakTime// five minutes
+	breakTime: woodSpikeItemData.break_time// five minutes
 }
 
 /**
