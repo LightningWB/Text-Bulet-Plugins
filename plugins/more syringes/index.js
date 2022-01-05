@@ -68,7 +68,7 @@ const xpShot = {
 	icon: '⇸',
 	desc: 'a shot containing a strange, empowering substance.',
 	func: true,
-	func_desc: 'a syringe containing a strange, empowering substance that gives you 250 experience.',
+	func_desc: 'a syringe containing a strange, empowering substance that gives you 100 experience.',
 	func_actions: {
 		inject: {
 			server: 'inject',
