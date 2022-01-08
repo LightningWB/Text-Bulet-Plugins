@@ -7,7 +7,11 @@ const { chunks } = require('./bullet');
 const bullet = require('./bullet');
 const plugin = bullet.makePlugin('FootSteps');
 const INVALID_TILES = ['w', 'M', 't', 'T', 'H', 'C'];
-let footSteps = [];
+let footSteps = plugin.getStorage().data || [];
+
+setInterval(() => {
+	plugin.setStorage({data: footSteps});
+}, 10 * 1000);
 
 let tick = 0;
 
@@ -48,7 +52,7 @@ function playerTick(player) {
 			objs.push({
 				x: print.x,
 				y: print.y,
-				char: print.char,
+				char: dirToChar[print.char],
 				is_breakable: false,
 				is_door: false,
 				walk_over: true
@@ -64,7 +68,7 @@ function playerTick(player) {
 function movePlayer(player) {
 	const {x, y} = player.public;
 	if(Math.random() < FOOT_PRINT_PROBABILITY && !INVALID_TILES.includes(bullet.generateTileAt(x, y)) && !chunks.isObjectHere(x, y) && footSteps.find(loc => loc.x === x && loc.y === y) === undefined && player?.cache?.travelData?.dir !== '') {
-		footSteps.push({x: x, y: y, char: dirToChar[player.cache.travelData.dir]});
+		footSteps.push({x: x, y: y, char: player.cache.travelData.dir});
 	}
 }
 
