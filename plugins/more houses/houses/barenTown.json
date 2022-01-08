@@ -17,7 +17,7 @@
 	  "building": {
 		"id": "building",
 		"title": "a large building",
-		"body": "a large, open building. own the hall, is a room full of tables, chairs and a cashier's counter. there's a door to the basement, and a door to the roof.",
+		"body": "a large, open building. down the hall, is a room full of tables, chairs and a cashier's counter. there's a door to the basement, and a door to the roof.",
 		"btns": [
 		  {
 			"for": "basement",
