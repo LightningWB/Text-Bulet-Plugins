@@ -82,3 +82,6 @@ bullet.patches.addPatch('ENGINE.log', 'MOBILE.notif("event");', 'MOBILE.notif("e
 // if you have a bp and the recipe unlocked
 bullet.patches.addPatch('CRAFTING.setHtml', 'let miscText = []', 'const added = [];let miscText = []', false);
 bullet.patches.addPatch('CRAFTING.setHtml', 'switch (type) {', 'if(added.includes(job.name)){return;}added.push(job.name);switch (type) {', false);
+
+// other players stand over tile
+bullet.patches.addPatch('WORLD.checkPlayersAndObjs', '(YOU.x !== x || YOU.y !== y)', '(YOU.x !== x || YOU.y !== y) || WORLD.otherPlayers.find(p => p.x === x && p.y === y) !== undefined', false);
