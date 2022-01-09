@@ -74,7 +74,6 @@ const newWorldGen = `function generateTileAt(x,y){
             } else if(grassPerlin > .5) {
                 bottomtile = TILES.grass;
             }
-			biome = 'hills';
         } else {
             bottomtile = TILES.mountain;// mountain
             biome = 'mountains';
