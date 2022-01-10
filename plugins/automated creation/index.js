@@ -256,7 +256,7 @@ plug.on('travelers::addGameItem', (id, item) => {
 		item.func_actions.check_oil_levels = {
 			server: 'check_oil_levels',
 			client: "if(YOU.currentTile !== 'w') {ENGINE.log('unable to analyze here.', false);} else if (SUPPLIES.current['water_analyzer'] !== undefined) {ENGINE.log('analyzing...', false);} else {ENGINE.log('you don\\'t have a water analyzer.');}",
-			btn_text: 'analyze'
+			btn_text: 'check oil levels'
 		};
 	}
 }, 10);
