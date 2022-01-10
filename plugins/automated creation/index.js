@@ -263,8 +263,12 @@ plug.on('travelers::addGameItem', (id, item) => {
 
 plug.on('ready', () => {
 	for(const item of items) {
-		item.craft_time = Math.floor(item.craft_time * bullet.options.tps);
-		item.break_time = Math.floor(item.break_time * bullet.options.tps);
+		if(item.craft_time) {
+			item.craft_time = Math.floor(item.craft_time * bullet.options.tps);
+		}
+		if(item.break_time) {
+			item.break_time = Math.floor(item.break_time * bullet.options.tps);
+		}
 		bullet.emit('travelers', 'addGameItem', item.name, item);
 	}
 	bullet.emit('travelers', 'addCraftableItem', 'lumber_mill', 44);
