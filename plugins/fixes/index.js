@@ -40,36 +40,57 @@ plug.on('travelers::shouldHealPlayer', (player, out) => {
 	}
 });
 
-bullet.patches.addJs('TIME.tps=' + Math.ceil(bullet.options.tps));
+bullet.patches.addJs('TIME.tps=' + bullet.options.tps);
 // when the tps is greater than 2 the timer sucks
-if(bullet.options.tps > 2) {
-	bullet.patches.addJs(`TIME.countdown = function(){
-		let setTimes = function (t) {
-			TIME.countdownEl.innerHTML = t;
-			POPUP.evCycleText.innerHTML = "cycle: " + t;
-		};
-		TIME.setDate();
-		clearTimeout(TIME.dc_timeout);
-		setTimes(TIME.turn);
-		TIME.dc_timeout = setTimeout(function () {
-			let switchbool = true;
-			TIME.countdown_interval = setInterval(function () {
-				if (switchbool) {
-					setTimes("disconnected.");
-				} else {
-					setTimes("<b>disconnected.</b>");
-				}
-				switchbool = !switchbool;
-			}, 1750);
+if(bullet.options.tps !== 1 && bullet.options.tps <= 2) {
+	bullet.patches.addJs(`TIME.period = 25;TIME.countdown = function () {
+        let setTimes = function (t) {
+            TIME.countdownEl.innerHTML = t;
+            POPUP.evCycleText.innerHTML = "cycle: " + t;
+        };
 
-			setTimeout(function () {
-				document.getElementById("event-cycle").style.display = "none";
-			}, GAMEPROPS.framerate);
-			
-			NOTIF.new("disconnected");
-			DC.open();
-		}, 12000);
-	}`)
+        TIME.setDate();
+        TIME.hundms = 0;
+
+        clearInterval(TIME.countdown_interval);
+        clearInterval(TIME.dc_timeout);
+		let c = TIME.period - TIME.hundms;
+        c = new Array(c).fill("█").join("");
+        setTimes(c);
+
+        TIME.countdown_interval = setInterval(function () {
+            TIME.hundms++;
+            if (TIME.hundms === TIME.period) {
+                setTimes("");
+                clearInterval(TIME.countdown_interval);
+                if (!YOU.isDead && !TIME.server_dc) {
+                    TIME.dc_timeout = setTimeout(function () {
+                        let switchbool = true;
+                        TIME.countdown_interval = setInterval(function () {
+                            if (switchbool) {
+                                setTimes("disconnected.");
+                            } else {
+                                setTimes("<b>disconnected.</b>");
+                            }
+                            switchbool = !switchbool;
+                        }, 1750);
+
+                        setTimeout(function () {
+                            document.getElementById("event-cycle").style.display = "none";
+                        }, GAMEPROPS.framerate);
+                        
+                        NOTIF.new("disconnected");
+                        DC.open();
+                    }, 12000);
+                }
+            } else {
+                let c = TIME.period - TIME.hundms;
+                c = new Array(c).fill("█").join("");
+
+                setTimes(c);
+            }
+        }, 1 / TIME.tps * 1000 / TIME.period);
+    }`)
 }
 bullet.patches.addPatch('PVP.engine_process', '10', '10 * TIME.tps', false);
 bullet.patches.addPatch('PVP.start', 'PVP.timerBS_int = 60;', 'PVP.timerBS_int = 60 * TIME.tps;PVP.chalTimerEl.innerText = PVP.timerBs_int;');
