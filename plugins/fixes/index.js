@@ -40,7 +40,8 @@ plug.on('travelers::shouldHealPlayer', (player, out) => {
 	}
 });
 
-bullet.patches.addJs('TIME.tps=' + bullet.options.tps);
+bullet.patches.addJs('TIME.tps=' + Math.ceil(bullet.options.tps));
+bullet.patches.addJs('TIME.rawTPS=' + bullet.options.tps);
 // when the tps is greater than 2 the timer sucks
 if(bullet.options.tps !== 1 && bullet.options.tps <= 2) {
 	bullet.patches.addJs(`TIME.period = 25;TIME.countdown = function () {
@@ -89,7 +90,7 @@ if(bullet.options.tps !== 1 && bullet.options.tps <= 2) {
 
                 setTimes(c);
             }
-        }, 1 / TIME.tps * 1000 / TIME.period);
+        }, 1 / TIME.rawTPS * 1000 / TIME.period);
     }`)
 }
 bullet.patches.addPatch('PVP.engine_process', '10', '10 * TIME.tps', false);
