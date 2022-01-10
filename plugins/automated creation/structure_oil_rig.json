@@ -1,0 +1,27 @@
+{
+	"id": "structure_oil_rig",
+	"weight": "1",
+	"rooms": {
+	  "main": {
+		"id": "main",
+		"title": "oil rig",
+		"body": "one button lights up on the screen.",
+		"btns": [
+		  {
+			"for": "storage",
+			"text": "open storage"
+		  },
+		  "leave"
+		]
+	  },
+	  "storage": {
+		"id": "storage",
+		"title": "storage",
+		"body": "every oil extraction requires one energy cell. can occur once every 2 hours.",
+		"loot": true,
+		"nextId": "main",
+		"size": 180,
+		"lootTable": []
+	  }
+	}
+  }

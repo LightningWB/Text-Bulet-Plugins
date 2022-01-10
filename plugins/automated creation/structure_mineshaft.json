@@ -1,0 +1,27 @@
+{
+	"id": "structure_mineshaft",
+	"weight": "1",
+	"rooms": {
+	  "main": {
+		"id": "main",
+		"title": "mineshaft",
+		"body": "two button lights up on the screen.<span class=\"doc\">mineral: [[mineral]]</span><br><input type=\"button\" onclick=\"MSG.open('set the target resource.', 'copper/iron/sulfur', 6, 'set', 'cancel', 'setMineshaftTargetResource');\" value=\"set mineral\">",
+		"btns": [
+		  {
+			"for": "storage",
+			"text": "open storage"
+		  },
+		  "leave"
+		]
+	  },
+	  "storage": {
+		"id": "storage",
+		"title": "storage",
+		"body": "every ore batch requires one energy cell to mine.",
+		"loot": true,
+		"nextId": "main",
+		"size": 250,
+		"lootTable": []
+	  }
+	}
+  }

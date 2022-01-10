@@ -16,9 +16,9 @@ const c4 = {
 			count: 3,
 			title: 'plastic pieces'
 		},
-		alien_fragment: {
-			count: 3,
-			title: 'unknown material fragment'
+		gunpowder: {
+			count: 25,
+			title: 'gunpowder'
 		},
 		control_panel: {
 			count: 1,

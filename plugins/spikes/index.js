@@ -82,10 +82,10 @@ const playerTick = player => {
 			const id = bullet.chunks.getObject(x, y).private.structureId;
 			switch(id) {
 				case steelSpikeStructureData.id:
-					player.public.skills.hp -= 4;// counteract the player healing every cycle
+					player.public.skills.hp -= 3;// counteract the player healing every cycle
 					break;
 				case woodSpikeStructureData.id:
-					player.public.skills.hp -= 2;// counteract the player healing every cycle
+					player.public.skills.hp -= 1;// counteract the player healing every cycle
 					break;
 				default: return;
 			}

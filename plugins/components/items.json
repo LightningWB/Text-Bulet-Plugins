@@ -298,5 +298,65 @@
 			}
 		},
 		"craft_makes": 10
+	},
+	{
+		"name": "steel_cable",
+		"title": "steel cable",
+		"type": "misc",
+		"weight": 10,
+		"icon": "∽",
+		"desc": "a sturdy steel cable.",
+		"craft": true,
+		"craft_time": 30,
+		"craft_data": {
+			"steel_shard": {
+				"count": 10,
+				"title": "steel shard"
+			},
+			"rope": {
+				"count": 1,
+				"title": "rope"
+			}
+		}
+	},
+	{
+		"name": "oil_drum",
+		"title": "oil drum",
+		"type": "rare",
+		"weight": 30,
+		"icon": "▊",
+		"desc": "a drum filled with oil."
+	},
+	{
+		"name": "iron_ore",
+		"title": "iron ore",
+		"type": "misc",
+		"weight": 6,
+		"icon": "⦯",
+		"desc": "a chunk of iron ore."
+	},
+	{
+		"name": "sulfur",
+		"title": "sulfur",
+		"type": "misc",
+		"weight": 2,
+		"icon": "⎃",
+		"desc": "a small amount of sulfur."
+	},
+	{
+		"name": "charcoal",
+		"title": "charcoal",
+		"type": "misc",
+		"weight": 3,
+		"icon": "⌑",
+		"desc": "a small piece of charcoal."
+	},
+	{
+		"name": "gunpowder",
+		"title": "gunpowder",
+		"type": "misc",
+		"weight": 2,
+		"icon": "⌯",
+		"desc": "a small amount of gunpowder."
 	}
 ]

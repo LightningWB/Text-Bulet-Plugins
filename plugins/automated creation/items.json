@@ -1,0 +1,301 @@
+[
+	{
+		"name": "oil_rig",
+		"title": "oil rig",
+		"type": "build",
+		"weight": 100,
+		"icon": "⦜",
+		"desc": "an offshore oil rig capable of extracting oil from the ocean floor.",
+		"craft": true,
+		"craft_time": 7200,
+		"craft_data": {
+			"scrap_metal": {
+				"count": 25,
+				"title": "scrap metal"
+			},
+			"steel_shard": {
+				"count": 10,
+				"title": "steel shard"
+			},
+			"charged_core": {
+				"count": 5,
+				"title": "charged core"
+			},
+			"control_panel": {
+				"count": 3,
+				"title": "control panel"
+			},
+			"steel_crate": {
+				"count": 1,
+				"title": "steel crate"
+			}
+		},
+		"break_time": 2400,
+		"build": true,
+		"build_desc": "an offshore oil rig capable of extracting oil from the ocean floor. place on ocean platforms at least 5k from shore and check oil levels before placing."
+	},
+	{
+		"name": "mineshaft",
+		"title": "mineshaft",
+		"type": "build",
+		"weight": 100,
+		"icon": "Π",
+		"desc": "a mine capable of extracting ore from the earth.",
+		"craft": true,
+		"craft_time": 7200,
+		"craft_data": {
+			"scrap_metal": {
+				"count": 35,
+				"title": "scrap metal"
+			},
+			"steel_cable": {
+				"count": 10,
+				"title": "steel cable"
+			},
+			"circuit_board": {
+				"count": 10,
+				"title": "circuit board"
+			},
+			"steel_shard": {
+				"count": 10,
+				"title": "steel shard"
+			},
+			"charged_core": {
+				"count": 3,
+				"title": "charged core"
+			},
+			"control_panel": {
+				"count": 1,
+				"title": "control panel"
+			},
+			"steel_crate": {
+				"count": 1,
+				"title": "steel crate"
+			}
+		},
+		"break_time": 2400,
+		"build": true,
+		"build_desc": "a mine capable of extracting ore from the earth. check mineral levels before placing. can only be placed with 15km of mountains surrounding."
+	},
+	{
+		"name": "solar_panel",
+		"title": "solar panel",
+		"type": "build",
+		"weight": 100,
+		"icon": "▤",
+		"desc": "a solar panel capable of generating electricity from the sun.",
+		"craft": true,
+		"craft_time": 7200,
+		"craft_data": {
+			"scrap_metal": {
+				"count": 25,
+				"title": "scrap metal"
+			},
+			"circuit_board": {
+				"count": 25,
+				"title": "circuit board"
+			},
+			"copper_coil": {
+				"count": 10,
+				"title": "copper coil"
+			},
+			"plastic": {
+				"count": 5,
+				"title": "plastic pieces"
+			},
+			"wire": {
+				"count": 5,
+				"title": "wire"
+			},
+			"control_panel": {
+				"count": 1,
+				"title": "control panel"
+			}
+		},
+		"break_time": 2400,
+		"build": true,
+		"build_desc": "a solar panel capable of generating electricity from the sun. can only be placed in deserts at least 10km away from mountains."
+	},
+	{
+		"name": "lumber_mill",
+		"title": "lumber mill",
+		"type": "build",
+		"weight": 100,
+		"icon": "∸",
+		"desc": "a lumber mill capable of producing wood from a forest.",
+		"craft": true,
+		"craft_time": 7200,
+		"craft_data": {
+			"scrap_metal": {
+				"count": 25,
+				"title": "scrap metal"
+			},
+			"steel_shard": {
+				"count": 10,
+				"title": "steel shard"
+			},
+			"steel_cable": {
+				"count": 5,
+				"title": "steel cable"
+			},
+			"control_panel": {
+				"count": 3,
+				"title": "control panel"
+			},
+			"steel_crate": {
+				"count": 1,
+				"title": "steel crate"
+			}
+		},
+		"break_time": 2400,
+		"build": true,
+		"build_desc": "a lumber mill capable of producing wood from a forest. requires a 10km radius of only forest."
+	},
+	{
+		"name": "ground_analyzer",
+		"title": "soil analyzer",
+		"type": "tool",
+		"weight": 10,
+		"icon": "⌭",
+		"desc": "a tool capable of analyzing rock to determine what metals are more deep below.",
+		"craft": true,
+		"craft_time": 300,
+		"craft_data": {
+			"scrap_metal": {
+				"count": 20,
+				"title": "scrap metal"
+			},
+			"wire": {
+				"count": 5,
+				"title": "wire"
+			},
+			"circuit_board": {
+				"count": 1,
+				"title": "circuit board"
+			}
+		},
+		"func": true,
+		"func_desc": "analyzes rock to determine what metals are deep below.",
+		"func_actions": {
+			"analyze": {
+				"server": "analyze",
+				"client": "",
+				"btn_text": "analyze"
+			}
+		}
+	},
+	{
+		"name": "water_analyzer",
+		"title": "water analyzer",
+		"type": "tool",
+		"weight": 10,
+		"icon": "⌮",
+		"desc": "a tool capable of analyzing water to determine oil levels below the ocean floor. designed to be used from a boat.",
+		"craft": true,
+		"craft_time": 300,
+		"craft_data": {
+			"scrap_metal": {
+				"count": 20,
+				"title": "scrap metal"
+			},
+			"wire": {
+				"count": 5,
+				"title": "wire"
+			},
+			"antenna": {
+				"count": 1,
+				"title": "antenna"
+			},
+			"circuit_board": {
+				"count": 1,
+				"title": "circuit board"
+			}
+		}
+	},
+	{
+		"name": "refinery",
+		"title": "refinery",
+		"type": "build",
+		"weight": 250,
+		"icon": "⌬",
+		"desc": "a refinery capable of processing raw materials.",
+		"craft": true,
+		"craft_time": 7200,
+		"craft_data": {
+			"wood_stick": {
+				"count": 100,
+				"title": "wood plank"
+			},
+			"scrap_metal": {
+				"count": 25,
+				"title": "scrap metal"
+			},
+			"steel_shard": {
+				"count": 25,
+				"title": "steel shard"
+			},
+			"wire": {
+				"count": 15,
+				"title": "wire"
+			},
+			"charged_core": {
+				"count": 10,
+				"title": "charged core"
+			},
+			"steel_cable": {
+				"count": 5,
+				"title": "steel cable"
+			},
+			"control_panel": {
+				"count": 3,
+				"title": "control panel"
+			},
+			"steel_block": {
+				"count": 1,
+				"title": "reinforced steel fence"
+			}
+		},
+		"break_time": 2400,
+		"build": true,
+		"build_desc": "a refinery capable of processing raw materials."
+	},
+	{
+		"name": "factory",
+		"title": "factory",
+		"type": "build",
+		"weight": 100,
+		"icon": "⌂",
+		"desc": "a factory capable of producing various items from unprocessed materials.",
+		"craft": true,
+		"craft_time": 7200,
+		"craft_data": {
+			"scrap_metal": {
+				"count": 25,
+				"title": "scrap metal"
+			},
+			"steel_shard": {
+				"count": 10,
+				"title": "steel shard"
+			},
+			"steel_cable": {
+				"count": 5,
+				"title": "steel cable"
+			},
+			"charged_core": {
+				"count": 5,
+				"title": "charged core"
+			},
+			"control_panel": {
+				"count": 3,
+				"title": "control panel"
+			},
+			"steel_block": {
+				"count": 1,
+				"title": "reinforced steel fence"
+			}
+		},
+		"break_time": 2400,
+		"build": true,
+		"build_desc": "a factory capable of producing various items from unprocessed materials."
+	}
+]

@@ -30,6 +30,16 @@ plug.on('travelers::canPlaceStructure', (data, player, out) => {
 	}
 });
 
+plug.on('travelers::shouldHealPlayer', (player, out) => {
+	if(CURRENT_TURN % Math.ceil(bullet.options.tps * 5) === 0) {
+		out.set(true);
+		return false;
+	} else {
+		out.set(false);
+		return false;
+	}
+});
+
 bullet.patches.addJs('TIME.tps=' + Math.ceil(bullet.options.tps));
 // when the tps is greater than 2 the timer sucks
 if(bullet.options.tps > 2) {

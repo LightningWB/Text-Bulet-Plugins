@@ -1,0 +1,143 @@
+{
+	"id": "structure_refinery",
+	"weight": "1",
+	"rooms": {
+	  "main": {
+		"id": "main",
+		"title": "refinery",
+		"body": "a refinery with a door near the top and a chute at the bottom.",
+		"btns": [
+		  {
+			"for": "smelted-copper",
+			"text": "refine copper",
+			"req": true,
+			"reqItems": [
+			  {
+				"id": "copper_ore",
+				"title": "copper ore",
+				"count": 25
+			  }
+			],
+			"reqConsume": true,
+			"reqForAll": true
+		  },
+		  {
+			"for": "smelted-charcoal",
+			"text": "create charcoal",
+			"req": true,
+			"reqItems": [
+			  {
+				"id": "wood_stick",
+				"title": "wood plank",
+				"count": 50
+			  }
+			],
+			"reqConsume": true,
+			"reqForAll": true
+		  },
+		  {
+			"for": "smelted-iron",
+			"text": "refine iron to steel",
+			"req": true,
+			"reqItems": [
+			  {
+				"id": "iron_ore",
+				"title": "iron ore",
+				"count": 25
+			  },
+			  {
+				"id": "charcoal",
+				"title": "charcoal",
+				"count": 25
+			  }
+			],
+			"reqConsume": true,
+			"reqForAll": true
+		  },
+		  {
+			"for": "smelted-oil",
+			"text": "refine oil to plastic",
+			"req": true,
+			"reqItems": [
+			  {
+				"id": "oil_drum",
+				"title": "oil drum",
+				"count": 5
+			  }
+			],
+			"reqConsume": true,
+			"reqForAll": true
+		  },
+		  "leave"
+		]
+	  },
+	  "smelted-copper": {
+		"id": "smelted-copper",
+		"title": "copper",
+		"body": "after a few minutes, some copper coils emerge in the chute.",
+		"loot": true,
+		"store": false,
+		"nextId": "main",
+		"size": 0,
+		"lootTable": [
+		  {
+			"id": "copper_coil",
+			"min": 25,
+			"max": 25,
+			"chance": 1
+		  }
+		]
+	  },
+	  "smelted-iron": {
+		"id": "smelted-iron",
+		"title": "steel",
+		"body": "after a few minutes, some steel shards fall from the chute.",
+		"loot": true,
+		"store": false,
+		"nextId": "main",
+		"size": 0,
+		"lootTable": [
+		  {
+			"id": "steel_shard",
+			"min": 25,
+			"max": 25,
+			"chance": 1
+		  }
+		]
+	  },
+	  "smelted-oil": {
+		"id": "smelted-oil",
+		"title": "plastic",
+		"body": "after a few minutes, some plastic pieces fall from the chute.",
+		"loot": true,
+		"store": false,
+		"nextId": "main",
+		"size": 0,
+		"lootTable": [
+		  {
+			"id": "plastic",
+			"min": 25,
+			"max": 25,
+			"chance": 1
+		  }
+		]
+	  },
+	  "smelted-charcoal": {
+		"id": "smelted-charcoal",
+		"title": "charcoal",
+		"body": "after a few minutes, some charcoal falls from the chute.",
+		"loot": true,
+		"store": false,
+		"nextId": "main",
+		"size": 0,
+		"lootTable": [
+		  {
+			"id": "charcoal",
+			"min": 10,
+			"max": 10,
+			"chance": 1
+		  }
+		]
+	  }
+	}
+  }

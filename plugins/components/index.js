@@ -212,6 +212,7 @@ plug.on('ready', () => {
 	bullet.emit('travelers', 'addCraftableItem', 'wooden_sword', 9);
 	bullet.emit('travelers', 'addCraftableItem', 'wrench', 19);
 	bullet.emit('travelers', 'addCraftableItem', 'steel_crate', 29);
+	bullet.emit('travelers', 'addCraftableItem', 'steel_cable', 34);
 	bullet.emit('travelers', 'addStructureData', {
 		id: 'steel_crate',
 		placingItem: 'steel_crate',
@@ -222,7 +223,7 @@ plug.on('ready', () => {
 		breakTime: 600
 	});
 	bullet.emit('travelers', 'addEvent', 'structure_steel_crate', require('./steel_crate.json'));
-	bullet.emit('travelers', 'addCraftableItem', 'automated_turret', 59);
+	bullet.emit('travelers', 'addCraftableItem', 'automated_turret', 54);
 	bullet.emit('travelers', 'addStructureData', {
 		id: 'automated_turret',
 		placingItem: 'automated_turret',

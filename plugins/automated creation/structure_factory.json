@@ -1,0 +1,96 @@
+{
+	"id": "structure_factory",
+	"weight": "1",
+	"rooms": {
+	  "main": {
+		"id": "main",
+		"title": "a factory",
+		"body": "a factory with two machines. in the far corner there's a cylindrical slot for fuel.",
+		"btns": [
+		  {
+			"for": "craft-gunpowder",
+			"text": "mix gunpowder",
+			"req": true,
+			"reqItems": [
+			  {
+				"id": "charcoal",
+				"title": "charcoal",
+				"count": 25
+			  },
+			  {
+				"id": "sulfur",
+				"title": "sulfur",
+				"count": 20
+			  },
+			  {
+				  "id": "oil_drum",
+				  "title": "oil drum",
+				  "count": 1
+			  }
+			],
+			"reqConsume": true,
+			"reqForAll": true
+		  },
+		  {
+			"for": "craft-bullets",
+			"text": "create bullets",
+			"req": true,
+			"reqItems": [
+			  {
+				"id": "gunpowder",
+				"title": "gunpowder",
+				"count": 50
+			  },
+			  {
+				"id": "steel_shard",
+				"title": "steel shards",
+				"count": 10
+			  },
+			  {
+				  "id": "oil_drum",
+				  "title": "oil drum",
+				  "count": 1
+			  }
+			],
+			"reqConsume": true,
+			"reqForAll": true
+		  },
+		  "leave"
+		]
+	  },
+	  "craft-gunpowder": {
+		"id": "craft-gunpowder",
+		"title": "gunpowder",
+		"body": "after a few minute of mixing, black powder starts flowing out.",
+		"loot": true,
+		"store": false,
+		"nextId": "main",
+		"size": 10,
+		"lootTable": [
+		  {
+			"id": "gunpowder",
+			"min": 50,
+			"max": 50,
+			"chance": 1
+		  }
+		]
+	  },
+	  "craft-bullets": {
+		"id": "craft-bullets",
+		"title": "bullets",
+		"body": "after a few minutes, a pile of bullets comes out.",
+		"loot": true,
+		"store": false,
+		"nextId": "main",
+		"size": 10,
+		"lootTable": [
+		  {
+			"id": "bullet",
+			"min": 50,
+			"max": 50,
+			"chance": 1
+		  }
+		]
+	  }
+	}
+  }

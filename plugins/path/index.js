@@ -18,13 +18,9 @@ const pathItem = {
 			count: 30,
 			title: 'wood stick'
 		},
-		scrap_metal: {
-			count: 2,
-			title: 'scrap metal'
-		},
-		rope: {
-			count: 1,
-			title: 'rope'
+		steel_shard: {
+			count: 5,
+			title: 'steel shards'
 		}
 	},
 	breakTime: TPS * 15,// 15 seconds

@@ -1,0 +1,27 @@
+{
+	"id": "structure_lumber_mill",
+	"weight": "1",
+	"rooms": {
+	  "main": {
+		"id": "main",
+		"title": "lumber mill",
+		"body": "one button lights up on the screen.",
+		"btns": [
+		  {
+			"for": "storage",
+			"text": "open storage"
+		  },
+		  "leave"
+		]
+	  },
+	  "storage": {
+		"id": "storage",
+		"title": "storage",
+		"body": "every twenty-five wood requires one energy cell to produce.",
+		"loot": true,
+		"nextId": "main",
+		"size": 200,
+		"lootTable": []
+	  }
+	}
+  }
