@@ -43,7 +43,7 @@ plug.on('travelers::shouldHealPlayer', (player, out) => {
 bullet.patches.addJs('TIME.tps=' + Math.ceil(bullet.options.tps));
 bullet.patches.addJs('TIME.rawTPS=' + bullet.options.tps);
 // when the tps is greater than 2 the timer sucks
-if(bullet.options.tps !== 1 && bullet.options.tps <= 2) {
+if(bullet.options.tps < 1) {
 	bullet.patches.addJs(`TIME.period = 25;TIME.countdown = function () {
         let setTimes = function (t) {
             TIME.countdownEl.innerHTML = t;
@@ -91,7 +91,34 @@ if(bullet.options.tps !== 1 && bullet.options.tps <= 2) {
                 setTimes(c);
             }
         }, 1 / TIME.rawTPS * 1000 / TIME.period);
-    }`)
+    }`);
+} else if(bullet.options.tps > 1) {
+	bullet.patches.addJs(`TIME.countdown = function(){
+		let setTimes = function (t) {
+			TIME.countdownEl.innerHTML = t;
+			POPUP.evCycleText.innerHTML = "cycle: " + t;
+		};
+		TIME.setDate();
+		clearTimeout(TIME.dc_timeout);
+		setTimes(TIME.turn);
+		TIME.dc_timeout = setTimeout(function () {
+			let switchbool = true;
+			TIME.countdown_interval = setInterval(function () {
+				if (switchbool) {
+					setTimes("disconnected.");
+				} else {
+					setTimes("<b>disconnected.</b>");
+				}
+				switchbool = !switchbool;
+			}, 1750);
+			setTimeout(function () {
+				document.getElementById("event-cycle").style.display = "none";
+			}, GAMEPROPS.framerate);
+			
+			NOTIF.new("disconnected");
+			DC.open();
+		}, 12000);
+	}`);
 }
 bullet.patches.addPatch('PVP.engine_process', '10', '10 * TIME.tps', false);
 bullet.patches.addPatch('PVP.start', 'PVP.timerBS_int = 60;', 'PVP.timerBS_int = 60 * TIME.tps;PVP.chalTimerEl.innerText = PVP.timerBs_int;');
