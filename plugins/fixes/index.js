@@ -62,7 +62,7 @@ if(bullet.options.tps !== 1 && bullet.options.tps <= 2) {
         TIME.countdown_interval = setInterval(function () {
             TIME.hundms++;
             if (TIME.hundms === TIME.period) {
-                setTimes("");
+                setTimes(new Array(TIME.period).fill("▒").join(""));
                 clearInterval(TIME.countdown_interval);
                 if (!YOU.isDead && !TIME.server_dc) {
                     TIME.dc_timeout = setTimeout(function () {
