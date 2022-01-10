@@ -85,7 +85,7 @@ if(bullet.options.tps !== 1 && bullet.options.tps <= 2) {
                 }
             } else {
                 let c = TIME.period - TIME.hundms;
-                c = new Array(c).fill("█").join("");
+                c = new Array(TIME.period).fill(0).map((_, i)=> i < TIME.period - TIME.hundms ? "█" : "▒").join("");
 
                 setTimes(c);
             }
