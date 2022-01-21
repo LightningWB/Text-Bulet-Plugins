@@ -348,4 +348,4 @@ plug.on('ready', () => {
 	let out = bullet.util.out('', 'string');
 	bullet.emit('travelers', 'getHashedValue', 'storage', out);
 	storage = out.get();
-});
+}, -10);

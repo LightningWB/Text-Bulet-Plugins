@@ -19,9 +19,16 @@ const config = plug.loadConfig({
 			allowed: 'Number',
 			default: 20171007,
 			description: 'The world seed.'
+		},
+		grass_texture: {
+			allowed: 'String',
+			default: ',',
+			description: 'The texture to use for grass.'
 		}
 	}
 });
+
+bullet.worldGen.setTileTexture('grass', config.grass_texture);
 
 const newWorldGen = `function generateTileAt(x,y){
 	let bottomtile = TILES.sand;

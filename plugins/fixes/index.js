@@ -125,6 +125,9 @@ bullet.patches.addPatch('PVP.start', 'PVP.timerBS_int = 60;', 'PVP.timerBS_int =
 bullet.patches.addPatch('PVP.start', 'PVP.chalTimerEl.innerHTML = "60";', '');
 bullet.patches.addPatch('PVP.showRoundReview', '4', '5 * TIME.tps - 1', false);
 
+bullet.patches.addPatch('WORLD.checkPlayersAndObjs', 'WORLD.TILES.grass', 'WORLD.TILES.stump || WORLD.TILES.grass', false);
+bullet.patches.addPatch('WORLD.checkPlayersAndObjs', ', WORLD.TILES.grass', ', WORLD.TILES.stump || WORLD.TILES.grass', false);
+
 plug.addAdminText('setTime', 'Time', 'Set Time', d => {
 	if(Number.isInteger(Number(d))) {
 		bullet.emit('travelers', 'setTime', util.out(Number(d), 'int'));
