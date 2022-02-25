@@ -26,6 +26,21 @@ const mapItem = {
 
 bullet.patches.addJs('document.body.insertAdjacentHTML("beforeend", "<style>#event-popup{max-height:max(700px, 80%)}#event-desc{max-height:max(500px, 50%)}</style>");');
 
+plug.on('travelers::addEvent', (id, event) => {
+	if(id === 'city' && event?.id === 'withered') {
+		event.weight = 10000;
+		const tablesToChange = [event.rooms?.rotting, event.rooms?.tall].map(e=>e.lootTable);
+		tablesToChange.forEach(table => {
+			table.push({
+				id: mapItem.name,
+				min: 1,
+				max: 1,
+				chance: .1
+			});
+		});
+	}
+}, 100);
+
 plug.on('ready', () => {
 	bullet.emit('travelers', 'addGameItem', mapItem.name, mapItem);
-});
+}, 100);
