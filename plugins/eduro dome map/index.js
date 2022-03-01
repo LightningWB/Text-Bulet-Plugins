@@ -28,7 +28,6 @@ bullet.patches.addJs('document.body.insertAdjacentHTML("beforeend", "<style>#eve
 
 plug.on('travelers::addEvent', (id, event) => {
 	if(id === 'city' && event?.id === 'withered') {
-		event.weight = 10000;
 		const tablesToChange = [event.rooms?.rotting, event.rooms?.tall].map(e=>e.lootTable);
 		tablesToChange.forEach(table => {
 			table.push({
