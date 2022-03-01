@@ -5,7 +5,7 @@
 	  "main": {
 		"id": "main",
 		"title": "a police station",
-		"body": "a small walled-in compound stands out against the dead world. the gate is hanging open, and the station inside is still lit. the desks are unorganized, the computers are still on, and the doors are unlocked. there's a single door leading to an unknown room, and another leading to the office.",
+		"body": "a small walled-in compound stands out against the dead world. the gate is hanging open, with lit lights inside. there's a single door leading to an unknown room, and another leading to what looks like what was an office.",
 		"btns": [
 		  {
 			"for": "other",
@@ -13,7 +13,7 @@
 		  },
 		  {
 			"for": "office",
-			"text": "office"
+			"text": "the office"
 		  },
 		  "leave"
 		]
@@ -21,7 +21,7 @@
 	  "other": {
 		"id": "other",
 		"title": "the other room",
-		"body": "a single holding cell is open to visitors, but there's no one inside. just a single book on the floor. it reads \"we are doomed, but it isn't too late. there is still good in the world. if we want it, we can make it happen.\"",
+		"body": "a single holding cell is open to visitors, but there's no one inside. a few words have been scratched into the wall, covered in dust and barely legible.<span class=\"doc\">stuck in here at the end of the world. and for what? what does it matter anymore? now we are all on death row.<br></span>whoever wrote it must have lived to die somewhere else.",
 		"btns": [
 		  {
 			"for": "office",
@@ -33,7 +33,7 @@
 	  "office": {
 		"id": "office",
 		"title": "the office",
-		"body": "a single desk is still organized, with papers arranged in neat piles. the computer has been left on, and there's a single email open. it reads \"we are the police. we are the good guys. we're fighting the good fight. it is all of us against them. for the future of the world, we will bring them to justice. justice for everyone. justice for the earth. justice for the future. justice for the children. justice for all.\"",
+		"body": "a single desk is still organized, with papers arranged in neat piles. the computer has been left on, and there's a single email open. it reads:<span class=\"doc\">i thought we were the good guys, but they might be right about us. i just don't know what to believe anymore.<br></span>",
 		"btns": [
 		  {
 			"for": "other",
