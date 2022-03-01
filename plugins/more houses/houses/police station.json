@@ -5,7 +5,7 @@
 	  "main": {
 		"id": "main",
 		"title": "a police station",
-		"body": "a small walled-in compound stands out against the dead world. the gate is hanging open, with lit lights inside. there's a single door leading to an unknown room, and another leading to what looks like what was an office.",
+		"body": "a small walled-in compound stands out against the dead world. the gate is hanging open, with lit lights inside. there's a single door leading to an unknown room, and another leading to what looks like was an office.",
 		"btns": [
 		  {
 			"for": "other",
