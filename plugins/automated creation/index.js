@@ -76,7 +76,15 @@ plug.on('travelers::canPlaceStructure', (data, player, out) => {
 			for(let x = data.x - 15; x <= data.x + 15; x++) {
 				for(let y = data.y - 15; y <= data.y + 15; y++) {
 					const biome = bullet.generateBiomeAt(x, y);
-					if(biome !== 'mountains' || bullet.chunks.isObjectHere(x, y)) {
+					if(biome !== 'mountains') {
+						out.set(false);
+						return false;
+					}
+				}
+			}
+			for(let x = data.x - 5; x <= data.x + 5; x++) {
+				for(let y = data.y - 5; y <= data.y + 5; y++) {
+					if(bullet.chunks.getObject(x, y)?.private?.structureId === 'mineshaft') {
 						out.set(false);
 						return false;
 					}

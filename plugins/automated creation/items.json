@@ -75,7 +75,7 @@
 		},
 		"break_time": 2400,
 		"build": true,
-		"build_desc": "a mine capable of extracting ore from the earth. check mineral levels before placing. can only be placed with 15km of mountains surrounding."
+		"build_desc": "a mine capable of extracting ore from the earth. check mineral levels before placing. can only be placed with 15km of mountains surrounding. no other mine shafts within 5km are allowed."
 	},
 	{
 		"name": "solar_panel",
