@@ -1,0 +1,29 @@
+{
+    "id": "structure_reality_anchor",
+    "weight": "1",
+    "rooms": {
+      "main": {
+        "id": "main",
+        "title": "reality anchor",
+        "body": "<span class=\"doc\">[ANCHORED_PLAYERS]<br><br></span><br><input type=\"button\" onclick=\"SOCKET.send({action:'anchor_self'})\" value=\"anchor self\"><br><input type=\"button\" onclick=\"MSG.open('remove a traveler from the reality anchor.', 'username', 16, 'detach', 'cancel', 'removePlayerFromAnchor');\" value=\"detach traveler\"><br>",
+        "btns": [
+          {
+            "for": "fast-travel",
+            "text": "fast travel"
+          },
+          "leave"
+        ]
+      },
+      "fast-travel": {
+        "id": "fast-travel",
+        "title": "fast travel",
+        "body": "select any of the following locations to fast travel to. any items left in your inventory will be dropped nearby.<hr>[LOCATIONS]",
+        "btns": [
+          {
+            "for": "main",
+            "text": "main menu"
+          }
+        ]
+      }
+    }
+  }
