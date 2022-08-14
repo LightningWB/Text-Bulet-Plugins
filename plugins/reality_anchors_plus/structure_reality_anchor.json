@@ -17,7 +17,7 @@
       "fast-travel": {
         "id": "fast-travel",
         "title": "fast travel",
-        "body": "select any of the following locations to fast travel to. any items left in your inventory will be dropped nearby.<hr>[LOCATIONS]",
+        "body": "teleport to any of your linked reality anchors. any items left in your inventory will be dropped nearby.<hr>[LOCATIONS]",
         "btns": [
           {
             "for": "main",
