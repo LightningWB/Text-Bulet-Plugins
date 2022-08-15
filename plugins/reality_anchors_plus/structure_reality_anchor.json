@@ -5,7 +5,7 @@
       "main": {
         "id": "main",
         "title": "reality anchor",
-        "body": "<span class=\"doc\">[ANCHORED_PLAYERS]<br><br></span><br><input type=\"button\" onclick=\"SOCKET.send({action:'anchor_self'})\" value=\"anchor self\"><br><input type=\"button\" onclick=\"MSG.open('remove a traveler from the reality anchor.', 'username', 16, 'detach', 'cancel', 'removePlayerFromAnchor');\" value=\"detach traveler\"><br>",
+        "body": "<span class=\"doc\">[ANCHORED_PLAYERS]<br></span><br><input type=\"button\" onclick=\"SOCKET.send({action:'anchor_self'})\" value=\"anchor self\"><br><input type=\"button\" onclick=\"MSG.open('remove a traveler from the reality anchor.', 'username', 16, 'detach', 'cancel', 'removePlayerFromAnchor');\" value=\"detach traveler\"><br>",
         "btns": [
           {
             "for": "fast-travel",
